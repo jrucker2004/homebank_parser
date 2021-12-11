@@ -131,8 +131,9 @@ convert_amount(){
 # ===============================================
 # check_description() is used for debugging parsing
 #   errors.  Some characters in the descriptions used
-#   by mint will break the way I'm parsing.  This is
-#   most likely a bug on my part that I haven't fixed.
+#   by mint will break the way I'm parsing.  If you
+#   find additional characters that break parsing, add
+#   rows to this function to replace them with something else
 # ===============================================
 
 check_description(){
@@ -146,8 +147,10 @@ check_description(){
 
 
 # ===============================================
-# get_values() is the meat and potatoes of the parser.
-#   Don't look too closely, it's ugly.
+# Here's where the magic happens, if ugly code and
+#   horrible practices are what you call magic.
+#   Don't look too closely, it's ugly.  Yes this could
+#   probably be put in some kind of loop to clean it up.
 # ===============================================
 
 get_values(){
@@ -201,8 +204,8 @@ notes=$(tail -n $i $FILE | head -n 1 | perl -MText::CSV -le '
 
 
 # ===============================================
-# Here's where the magic happens, if ugly code and
-#   horrible practices are what you call magic.
+# Here's where we create the new csv files, and call
+#   all of the above functions.
 # ===============================================
 
 # HomeBank csv files don't include a header row.  Adding one will break the import.
