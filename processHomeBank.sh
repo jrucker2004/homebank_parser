@@ -12,7 +12,7 @@ FILE=$1
 
 get_category_id(){
 	case "$category" in
-	  	'Shopping') category="Groceries"
+      'Shopping') category="Groceries"
               ;;
       'Health Insurance') category="Insurance"
               ;;
