@@ -1,3 +1,7 @@
+# No Longer Supported
+Since mint.com is being closed down, this will no longer be supported.
+
+
 # HomeBank Parser
 This shell script will parse the CSV file created by mint.com export, and create CSV files for HomeBank to import.
 
